@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div class="form-group">
+      <label>Current font-variant-numeric:</label>
+      <input class="form-control-plaintext" [value]="fontValue">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Select font-variant-numeric:</label>
+      <select class="form-control" [(ngModel)]="fontValue">
+        <option *ngFor="let value of fontValues" [value]="value">
+          {{value}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4">
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">10101010101010</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">01010101010101</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">11001100111000</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">10110101101011</p>
+  </div>
+  <div class="col-12 col-lg-4">
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">12345678901234</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">23456789012345</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">34567890123456</p>
+    <p class="border" [ngStyle]="{'font-variant-numeric':fontValue}">45678901234567</p>
+  </div>
+</div>
